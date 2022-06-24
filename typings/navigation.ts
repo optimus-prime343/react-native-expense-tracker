@@ -9,6 +9,7 @@ export type BottomTabNavigationParamList = {
 export type RootStackParamList = {
   Root: undefined
   ManageExpense: { expenseId: string }
+  AddExpense: undefined
 }
 
 export type ScreenProps<T extends keyof RootStackParamList> = NativeStackScreenProps<

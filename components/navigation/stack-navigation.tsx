@@ -1,9 +1,10 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import React from 'react'
 
+import AddExpenseScreen from '../../screens/add-expense-screen'
 import ManageExpenseScreen from '../../screens/manage-expense-screen'
 import { RootStackParamList } from '../../typings/navigation'
-import ToggleThemeIcon from '../toggle-theme-icon'
+import HeaderRightActions from '../header-right-icons'
 import BottomTabNavigation from './bottom-tab-navigation'
 
 const StackNavigator = createNativeStackNavigator<RootStackParamList>()
@@ -19,8 +20,11 @@ const StackNavigation = () => {
       <StackNavigator.Screen
         name='ManageExpense'
         component={ManageExpenseScreen}
-        options={{ headerRight: () => <ToggleThemeIcon /> }}
+        options={{
+          headerRight: () => <HeaderRightActions />
+        }}
       />
+      <StackNavigator.Screen name='AddExpense' component={AddExpenseScreen} />
     </StackNavigator.Navigator>
   )
 }

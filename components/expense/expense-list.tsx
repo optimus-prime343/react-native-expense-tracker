@@ -10,7 +10,6 @@ type Props = {
 const ExpenseList = ({ expenses }: Props) => {
   return (
     <FlatList
-      contentContainerStyle={{ flexGrow: 1 }}
       data={expenses}
       renderItem={({ item: expense }) => <ExpenseItem expense={expense} />}
       keyExtractor={item => item.id}

@@ -5,14 +5,14 @@ import React from 'react'
 import AllExpensesScreen from '../../screens/all-expenses-screen'
 import RecentExpensesScreen from '../../screens/recent-expenses-screen'
 import { BottomTabNavigationParamList } from '../../typings/navigation'
-import ToggleThemeIcon from '../toggle-theme-icon'
+import HeaderRightActions from '../header-right-icons'
 
 const BottomTabNavigator = createBottomTabNavigator<BottomTabNavigationParamList>()
 
 const BottomTabNavigation = () => {
   return (
     <BottomTabNavigator.Navigator
-      screenOptions={{ headerRight: () => <ToggleThemeIcon /> }}
+      screenOptions={{ headerRight: () => <HeaderRightActions /> }}
     >
       <BottomTabNavigator.Screen
         name='Recent'
